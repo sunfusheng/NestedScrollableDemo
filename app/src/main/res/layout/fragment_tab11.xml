@@ -10,8 +10,8 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        app:elevation="0dp">
 
         <com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout
             android:id="@+id/tabLayout"
@@ -24,7 +24,7 @@
             app:stl_defaultTabTextAllCaps="false"
             app:stl_defaultTabTextColor="@color/tab_white_text_color"
             app:stl_defaultTabTextMinWidth="0dp"
-            app:stl_defaultTabTextSize="15sp"
+            app:stl_defaultTabTextSize="14sp"
             app:stl_distributeEvenly="false"
             app:stl_dividerThickness="0dp"
             app:stl_indicatorAlwaysInCenter="false"
@@ -47,3 +47,4 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
+

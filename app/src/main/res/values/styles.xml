@@ -8,4 +8,17 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="BottomTabBar">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/tab_main_text_color</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:drawablePadding">1dp</item>
+    </style>
+
 </resources>

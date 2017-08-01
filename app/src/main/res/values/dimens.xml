@@ -30,4 +30,8 @@
 
     <dimen name="status_bar_height">0dp</dimen>
 
+    <dimen name="bottom_bar_font_size">10sp</dimen>
+    <dimen name="bottom_bar_icon_size_w">25dp</dimen>
+    <dimen name="bottom_bar_icon_size_h">25dp</dimen>
+
 </resources>

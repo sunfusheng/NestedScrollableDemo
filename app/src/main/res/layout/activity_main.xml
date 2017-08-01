@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <FrameLayout
+        android:id="@+id/fl_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@color/white"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/transparent40"/>
+        android:background="#9e9e9e"/>
 
-    <com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout
-        android:id="@+id/tabLayout"
+    <com.sunfusheng.scrollable.widget.BottomTabBar
+        android:id="@+id/bottomTabBar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/white"
-        android:paddingBottom="1dp"
-        app:stl_defaultTabBackground="?attr/selectableItemBackground"
-        app:stl_defaultTabTextAllCaps="false"
-        app:stl_defaultTabTextColor="@color/tab_main_text_color"
-        app:stl_defaultTabTextMinWidth="0dp"
-        app:stl_defaultTabTextSize="15sp"
-        app:stl_distributeEvenly="true"
-        app:stl_dividerThickness="0dp"
-        app:stl_indicatorAlwaysInCenter="false"
-        app:stl_indicatorColor="@color/transparent80"
-        app:stl_indicatorCornerRadius="2dp"
-        app:stl_indicatorGravity="bottom"
-        app:stl_indicatorInFront="true"
-        app:stl_indicatorInterpolation="smart"
-        app:stl_indicatorThickness="2dp"
-        app:stl_indicatorWithoutPadding="true"
-        app:stl_overlineColor="@color/transparent"
-        app:stl_overlineThickness="0dp"
-        app:stl_underlineThickness="0dp"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

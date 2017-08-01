@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <com.sunfusheng.scrollable.widget.ImageTextView
+        android:id="@+id/tab11"
+        style="@style/BottomTabBar"
+        android:drawableTop="@drawable/ic_page11_selector"
+        android:text="TAB11"
+        app:top_height="@dimen/bottom_bar_icon_size_h"
+        app:top_width="@dimen/bottom_bar_icon_size_w"/>
+
+    <com.sunfusheng.scrollable.widget.ImageTextView
+        android:id="@+id/tab12"
+        style="@style/BottomTabBar"
+        android:drawableTop="@drawable/ic_page12_selector"
+        android:text="TAB12"
+        app:top_height="@dimen/bottom_bar_icon_size_h"
+        app:top_width="@dimen/bottom_bar_icon_size_w"/>
+
+    <com.sunfusheng.scrollable.widget.ImageTextView
+        android:id="@+id/tab13"
+        style="@style/BottomTabBar"
+        android:drawableTop="@drawable/ic_page13_selector"
+        android:text="TAB13"
+        app:top_height="@dimen/bottom_bar_icon_size_h"
+        app:top_width="@dimen/bottom_bar_icon_size_w"/>
+
+    <com.sunfusheng.scrollable.widget.ImageTextView
+        android:id="@+id/tab14"
+        style="@style/BottomTabBar"
+        android:drawableTop="@drawable/ic_page14_selector"
+        android:text="TAB14"
+        app:top_height="@dimen/bottom_bar_icon_size_h"
+        app:top_width="@dimen/bottom_bar_icon_size_w"/>
+
+</LinearLayout>
