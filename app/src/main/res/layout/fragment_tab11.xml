@@ -16,7 +16,7 @@
         <com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@color/colorPrimary"
             android:paddingBottom="1dp"
             app:layout_scrollFlags="scroll|enterAlways"
@@ -24,7 +24,7 @@
             app:stl_defaultTabTextAllCaps="false"
             app:stl_defaultTabTextColor="@color/tab_white_text_color"
             app:stl_defaultTabTextMinWidth="0dp"
-            app:stl_defaultTabTextSize="14sp"
+            app:stl_defaultTabTextSize="15sp"
             app:stl_distributeEvenly="false"
             app:stl_dividerThickness="0dp"
             app:stl_indicatorAlwaysInCenter="false"

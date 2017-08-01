@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.sunfusheng.scrollable.R;
 import com.sunfusheng.scrollable.adpater.BaseListAdapter;
@@ -35,8 +36,8 @@ public class Tab21Fragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         List<String> list = new ArrayList<>();
-        for (int i=0; i<20; i++) {
-            list.add(""+i+1);
+        for (int i=0; i<30; i++) {
+            list.add(i+"、NestedListView");
         }
         ListViewAdapter adapter = new ListViewAdapter(getContext(), list);
         listView.setAdapter(adapter);
@@ -52,6 +53,8 @@ public class Tab21Fragment extends BaseFragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             convertView = mInflater.inflate(R.layout.layout_item, null);
+            TextView textView = (TextView) convertView.findViewById(R.id.textView);
+            textView.setText(getItem(position));
             return convertView;
         }
     }

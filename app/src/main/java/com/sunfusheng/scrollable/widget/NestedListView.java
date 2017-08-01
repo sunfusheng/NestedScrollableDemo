@@ -1,7 +1,6 @@
 package com.sunfusheng.scrollable.widget;
 
 import android.content.Context;
-import android.os.Build;
 import android.support.v4.view.NestedScrollingChild;
 import android.support.v4.view.NestedScrollingChildHelper;
 import android.support.v4.view.ViewCompat;
@@ -15,7 +14,9 @@ import android.widget.ListView;
 public class NestedListView extends ListView implements NestedScrollingChild {
 
     private NestedScrollingChildHelper helper;
-    private float mLastY;
+    private float lastY;
+    private int[] consumed = new int[2];
+    private int[] offsetInWindow = new int[2];
 
     public NestedListView(Context context) {
         this(context, null);
@@ -37,39 +38,22 @@ public class NestedListView extends ListView implements NestedScrollingChild {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            mLastY = ev.getY();
-            startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                lastY = ev.getY();
+                startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                int offsetY = (int) (lastY - ev.getY());
+                lastY = ev.getY();
+                if (dispatchNestedPreScroll(0, offsetY, consumed, offsetInWindow)) {
+                    lastY -= offsetInWindow[1];
+                    return true;
+                }
+                break;
         }
         return super.dispatchTouchEvent(ev);
     }
-
-
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            switch (ev.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    float deltaY = mLastY - ev.getY();
-                    mLastY = ev.getY();
-                    if (dispatchNestedPreScroll(0, (int) deltaY, consumed, offset)) {
-                        mLastY -= offset[1];
-                        return true;
-                    }
-                    break;
-                case MotionEvent.ACTION_UP:
-
-                    break;
-            }
-            return super.onTouchEvent(ev);
-        } else {
-            return super.onTouchEvent(ev);
-        }
-    }
-
-    private int[] offset = new int[2], consumed = new int[2];
 
     @Override
     public void setNestedScrollingEnabled(boolean enabled) {
