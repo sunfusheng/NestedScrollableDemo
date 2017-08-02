@@ -15,12 +15,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:background="@color/md_red_100"
+        android:background="@color/md_red_200"
         android:minHeight="100dp"
         android:gravity="center_vertical"
-        android:padding="10dp"
+        android:paddingLeft="20dp"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="NestedListView"/>
+        android:textSize="20sp"
+        android:text=""/>
 
 </LinearLayout>

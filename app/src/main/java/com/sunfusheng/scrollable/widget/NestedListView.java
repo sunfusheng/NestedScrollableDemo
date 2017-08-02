@@ -3,9 +3,7 @@ package com.sunfusheng.scrollable.widget;
 import android.content.Context;
 import android.support.v4.view.NestedScrollingChild;
 import android.support.v4.view.NestedScrollingChildHelper;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.widget.ListView;
 
 /**
@@ -14,9 +12,6 @@ import android.widget.ListView;
 public class NestedListView extends ListView implements NestedScrollingChild {
 
     private NestedScrollingChildHelper helper;
-    private float lastY;
-    private int[] consumed = new int[2];
-    private int[] offsetInWindow = new int[2];
 
     public NestedListView(Context context) {
         this(context, null);
@@ -34,25 +29,6 @@ public class NestedListView extends ListView implements NestedScrollingChild {
     private void init() {
         helper = new NestedScrollingChildHelper(this);
         setNestedScrollingEnabled(true);
-    }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        switch (ev.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                lastY = ev.getY();
-                startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
-                break;
-            case MotionEvent.ACTION_MOVE:
-                int offsetY = (int) (lastY - ev.getY());
-                lastY = ev.getY();
-                if (dispatchNestedPreScroll(0, offsetY, consumed, offsetInWindow)) {
-                    lastY -= offsetInWindow[1];
-                    return true;
-                }
-                break;
-        }
-        return super.dispatchTouchEvent(ev);
     }
 
     @Override
@@ -85,18 +61,6 @@ public class NestedListView extends ListView implements NestedScrollingChild {
         return helper.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow);
     }
 
-
-    /**
-     * 在子View的onInterceptTouchEvent或者onTouch中(一般在MotionEvent.ACTION_MOVE事件里)，
-     * 调用该方法通知父View滑动的距离。
-     * 如果父view接受了它的滚动参数，进行了部分消费，则这个函数返回true，否则为false。
-     *
-     * @param dx
-     * @param dy
-     * @param consumed       父view消费掉的scroll长度
-     * @param offsetInWindow 子View的窗体偏移量
-     * @return
-     */
     @Override
     public boolean dispatchNestedPreScroll(int dx, int dy, int[] consumed, int[] offsetInWindow) {
         return helper.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow);
@@ -104,12 +68,12 @@ public class NestedListView extends ListView implements NestedScrollingChild {
 
     @Override
     public boolean dispatchNestedFling(float velocityX, float velocityY, boolean consumed) {
-        return false;
+        return helper.dispatchNestedFling(velocityX, velocityY, consumed);
     }
 
     @Override
     public boolean dispatchNestedPreFling(float velocityX, float velocityY) {
-        return false;
+        return helper.dispatchNestedPreFling(velocityX, velocityY);
     }
 
 }
