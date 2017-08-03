@@ -55,15 +55,4 @@
         <attr name="stl_drawDecorationAfterTab" format="boolean"/>
     </declare-styleable>
 
-    <declare-styleable name="ElasticCardView">
-        <attr name="ratio" format="float"/>
-    </declare-styleable>
-
-    <declare-styleable name="CardViewPager">
-        <attr name="card_padding" format="dimension"/>
-        <attr name="card_margin" format="dimension"/>
-        <attr name="card_loop" format="boolean"/>
-        <attr name="card_max_offset" format="dimension"/>
-    </declare-styleable>
-
 </resources>

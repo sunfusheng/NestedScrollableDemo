@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/coordinatorLayout"
+<com.sunfusheng.scrollable.widget.ScrollableLayout.ScrollableLayout
+    android:id="@+id/scrollableLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.sunfusheng.scrollable.widget.NestedListView
-        android:id="@+id/listView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:dividerHeight="0dp"
-        android:divider="@null"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:background="@color/md_blue_400"/>
+
+    </LinearLayout>
+
+    <com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/c11"
+        android:paddingBottom="1dp"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="@color/tab_white_text_color"
+        app:stl_defaultTabTextMinWidth="0dp"
+        app:stl_defaultTabTextSize="13sp"
+        app:stl_distributeEvenly="false"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorAlwaysInCenter="false"
+        app:stl_indicatorColor="@color/white"
+        app:stl_indicatorCornerRadius="2px"
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="4px"
+        app:stl_indicatorWithoutPadding="true"
+        app:stl_overlineColor="@color/transparent"
+        app:stl_overlineThickness="0dp"
+        app:stl_underlineThickness="0dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.sunfusheng.scrollable.widget.ScrollableLayout.ScrollableLayout>

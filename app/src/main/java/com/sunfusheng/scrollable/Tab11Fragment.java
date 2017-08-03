@@ -16,15 +16,15 @@ import com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout;
  */
 public class Tab11Fragment extends BaseFragment {
 
-    private ViewPager viewPager;
     private SmartTabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab11, container, false);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         tabLayout = (SmartTabLayout) view.findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         return view;
     }
 
@@ -37,6 +37,7 @@ public class Tab11Fragment extends BaseFragment {
                 .add("TAB23", new Tab23Fragment())
                 .build();
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(3);
         tabLayout.setViewPager(viewPager);
     }
 }

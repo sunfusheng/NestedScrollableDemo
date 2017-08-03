@@ -14,9 +14,9 @@ public class MainActivity extends BaseActivity {
 
     private Fragment[] fragments = {
             new Tab11Fragment(),
-            new Tab11Fragment(),
-            new Tab11Fragment(),
-            new Tab11Fragment()
+            new Tab12Fragment(),
+            new Tab13Fragment(),
+            new Tab14Fragment()
     };
 
     private static final String[] TAGS = {
