@@ -14,6 +14,7 @@ public class MultiItemAdapter extends BaseMultiItemQuickAdapter<MultiItem, BaseV
 
     public MultiItemAdapter(List<MultiItem> data) {
         super(data);
+        addItemType(-1, R.layout.layout_item);
         addItemType(0, R.layout.item_no_image);
         addItemType(1, R.layout.item_right_image);
         addItemType(2, R.layout.item_three_images);

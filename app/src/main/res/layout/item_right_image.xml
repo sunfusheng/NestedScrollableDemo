@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/d5"
             android:layout_toLeftOf="@+id/prl_image"
-            android:background="@color/md_blue_300"
+            android:background="@color/md_blue_400"
             android:ellipsize="end"
             android:maxLines="2"
             android:textSize="@dimen/f6"/>
@@ -40,7 +40,7 @@
             android:layout_width="105dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@color/md_blue_300">
+            android:background="@color/md_blue_400">
 
             <com.sunfusheng.glideimageview.GlideImageView
                 android:id="@+id/giv"

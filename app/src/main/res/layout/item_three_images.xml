@@ -14,7 +14,7 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/md_indigo_200"
+        android:background="@color/md_indigo_300"
         android:ellipsize="end"
         android:maxLines="2"
         android:textSize="@dimen/f6"/>
@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/md_indigo_200">
+            android:background="@color/md_indigo_300">
 
             <com.sunfusheng.glideimageview.GlideImageView
                 android:id="@+id/giv1"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/d3"
             android:layout_weight="1"
-            android:background="@color/md_indigo_200">
+            android:background="@color/md_indigo_300">
 
             <com.sunfusheng.glideimageview.GlideImageView
                 android:id="@+id/giv2"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/d3"
             android:layout_weight="1"
-            android:background="@color/md_indigo_200">
+            android:background="@color/md_indigo_300">
 
             <com.sunfusheng.glideimageview.GlideImageView
                 android:id="@+id/giv3"

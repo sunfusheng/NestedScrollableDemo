@@ -34,7 +34,7 @@ public class Tab11Fragment extends BaseFragment {
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter.Builder(getContext(), getChildFragmentManager())
                 .add("TAB21", new Tab21Fragment())
                 .add("TAB22", new Tab22Fragment())
-                .add("TAB23", new Tab22Fragment())
+                .add("TAB23", new Tab23Fragment())
                 .build();
         viewPager.setAdapter(adapter);
         tabLayout.setViewPager(viewPager);

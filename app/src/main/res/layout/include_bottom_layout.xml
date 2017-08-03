@@ -10,7 +10,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/d4"
-        android:background="@color/md_blue_300"
+        android:background="@color/md_blue_400"
         android:textSize="@dimen/f8"/>
 
 </LinearLayout>

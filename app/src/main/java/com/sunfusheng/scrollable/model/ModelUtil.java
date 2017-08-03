@@ -13,14 +13,14 @@ public class ModelUtil {
     public static List<Item> getTab21Data() {
         List<Item> list = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            list.add(new Item("", R.color.md_blue_300));
+            list.add(new Item("", R.color.md_blue_400));
         }
         return list;
     }
 
     public static List<MultiItem> getTab22Data() {
         List<MultiItem> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             list.add(new MultiItem(0));
             list.add(new MultiItem(1));
             list.add(new MultiItem(1));
@@ -29,6 +29,14 @@ public class ModelUtil {
             list.add(new MultiItem(1));
             list.add(new MultiItem(2));
             list.add(new MultiItem(3));
+        }
+        return list;
+    }
+
+    public static List<MultiItem> getTab23Data() {
+        List<MultiItem> list = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            list.add(new MultiItem(-1));
         }
         return list;
     }
