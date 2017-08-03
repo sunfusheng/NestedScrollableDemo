@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable.ui;
+package com.sunfusheng.scrollable;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sunfusheng.scrollable.R;
 import com.sunfusheng.scrollable.adpater.FragmentPagerItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout;
@@ -35,7 +34,7 @@ public class Tab11Fragment extends BaseFragment {
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter.Builder(getContext(), getChildFragmentManager())
                 .add("TAB21", new Tab21Fragment())
                 .add("TAB22", new Tab22Fragment())
-                .add("TAB23", new Tab21Fragment())
+                .add("TAB23", new Tab22Fragment())
                 .build();
         viewPager.setAdapter(adapter);
         tabLayout.setViewPager(viewPager);

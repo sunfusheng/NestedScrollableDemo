@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sunfusheng.scrollable.R;
@@ -13,7 +13,7 @@ import com.sunfusheng.scrollable.R;
 /**
  * Created by sunfusheng on 2017/7/31.
  */
-public class BottomTabBar extends FrameLayout {
+public class BottomTabBar extends LinearLayout implements View.OnClickListener {
 
     private TextView tab11;
     private TextView tab12;
@@ -34,11 +34,16 @@ public class BottomTabBar extends FrameLayout {
     }
 
     private void init(Context context) {
-        View view= LayoutInflater.from(context).inflate(R.layout.layout_bottom_tab, this);
+        View view = LayoutInflater.from(context).inflate(R.layout.layout_bottom_tab, this);
         tab11 = (TextView) view.findViewById(R.id.tab11);
         tab12 = (TextView) view.findViewById(R.id.tab12);
         tab13 = (TextView) view.findViewById(R.id.tab13);
         tab14 = (TextView) view.findViewById(R.id.tab14);
+
+        tab11.setOnClickListener(this);
+        tab12.setOnClickListener(this);
+        tab13.setOnClickListener(this);
+        tab14.setOnClickListener(this);
     }
 
     public void setSelected(int position) {
@@ -62,4 +67,43 @@ public class BottomTabBar extends FrameLayout {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tab11:
+                setSelected(0);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(0);
+                }
+                break;
+            case R.id.tab12:
+                setSelected(1);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(1);
+                }
+                break;
+            case R.id.tab13:
+                setSelected(2);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(2);
+                }
+                break;
+            case R.id.tab14:
+                setSelected(3);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(3);
+                }
+                break;
+        }
+    }
+
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
 }

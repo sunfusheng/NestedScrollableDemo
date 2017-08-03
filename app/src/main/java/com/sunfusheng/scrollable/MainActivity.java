@@ -4,20 +4,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.widget.TextView;
 
 import com.sunfusheng.scrollable.base.BaseActivity;
-import com.sunfusheng.scrollable.ui.Tab11Fragment;
 import com.sunfusheng.scrollable.widget.BottomTabBar;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity {
 
     private BottomTabBar bottomTabBar;
-    private TextView tab11;
-    private TextView tab12;
-    private TextView tab13;
-    private TextView tab14;
 
     private Fragment[] fragments = {
             new Tab11Fragment(),
@@ -46,15 +39,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void initView() {
         bottomTabBar = (BottomTabBar) findViewById(R.id.bottomTabBar);
-        tab11 = (TextView) findViewById(R.id.tab11);
-        tab12 = (TextView) findViewById(R.id.tab12);
-        tab13 = (TextView) findViewById(R.id.tab13);
-        tab14 = (TextView) findViewById(R.id.tab14);
-
-        tab11.setOnClickListener(this);
-        tab12.setOnClickListener(this);
-        tab13.setOnClickListener(this);
-        tab14.setOnClickListener(this);
+        bottomTabBar.setOnItemClickListener(position -> {
+            showFragment(position, fragments[position]);
+        });
     }
 
     private void showFragment(int position, Fragment fragment) {
@@ -75,25 +62,4 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         fragmentTransaction.commit();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tab11:
-                bottomTabBar.setSelected(0);
-                showFragment(0, fragments[0]);
-                break;
-            case R.id.tab12:
-                bottomTabBar.setSelected(1);
-                showFragment(1, fragments[1]);
-                break;
-            case R.id.tab13:
-                bottomTabBar.setSelected(2);
-                showFragment(2, fragments[2]);
-                break;
-            case R.id.tab14:
-                bottomTabBar.setSelected(3);
-                showFragment(3, fragments[3]);
-                break;
-        }
-    }
 }

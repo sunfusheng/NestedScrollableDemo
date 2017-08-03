@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable.ui;
+package com.sunfusheng.scrollable;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

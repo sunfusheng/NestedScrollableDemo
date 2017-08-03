@@ -10,7 +10,7 @@
     <com.sunfusheng.scrollable.widget.ImageTextView
         android:id="@+id/tab11"
         style="@style/BottomTabBar"
-        android:drawableTop="@drawable/ic_page11_selector"
+        android:drawableTop="@drawable/ic_tab_selector"
         android:text="TAB11"
         app:top_height="@dimen/bottom_bar_icon_size_h"
         app:top_width="@dimen/bottom_bar_icon_size_w"/>
@@ -18,7 +18,7 @@
     <com.sunfusheng.scrollable.widget.ImageTextView
         android:id="@+id/tab12"
         style="@style/BottomTabBar"
-        android:drawableTop="@drawable/ic_page12_selector"
+        android:drawableTop="@drawable/ic_tab_selector"
         android:text="TAB12"
         app:top_height="@dimen/bottom_bar_icon_size_h"
         app:top_width="@dimen/bottom_bar_icon_size_w"/>
@@ -26,7 +26,7 @@
     <com.sunfusheng.scrollable.widget.ImageTextView
         android:id="@+id/tab13"
         style="@style/BottomTabBar"
-        android:drawableTop="@drawable/ic_page13_selector"
+        android:drawableTop="@drawable/ic_tab_selector"
         android:text="TAB13"
         app:top_height="@dimen/bottom_bar_icon_size_h"
         app:top_width="@dimen/bottom_bar_icon_size_w"/>
@@ -34,7 +34,7 @@
     <com.sunfusheng.scrollable.widget.ImageTextView
         android:id="@+id/tab14"
         style="@style/BottomTabBar"
-        android:drawableTop="@drawable/ic_page14_selector"
+        android:drawableTop="@drawable/ic_tab_selector"
         android:text="TAB14"
         app:top_height="@dimen/bottom_bar_icon_size_h"
         app:top_width="@dimen/bottom_bar_icon_size_w"/>
