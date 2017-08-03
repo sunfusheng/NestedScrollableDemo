@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable;
+package com.sunfusheng.scrollable.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sunfusheng.scrollable.R;
 import com.sunfusheng.scrollable.adpater.MultiItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.model.ModelUtil;
@@ -31,7 +32,7 @@ public class Tab31Fragment extends BaseFragment implements ScrollableHelper.Scro
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MultiItemAdapter adapter = new MultiItemAdapter(ModelUtil.getTab23Data());
+        MultiItemAdapter adapter = new MultiItemAdapter(ModelUtil.getTab31Data());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
     }

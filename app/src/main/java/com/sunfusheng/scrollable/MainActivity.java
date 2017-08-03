@@ -6,6 +6,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.sunfusheng.scrollable.base.BaseActivity;
+import com.sunfusheng.scrollable.fragment.Tab11Fragment;
+import com.sunfusheng.scrollable.fragment.Tab12Fragment;
+import com.sunfusheng.scrollable.fragment.Tab13Fragment;
+import com.sunfusheng.scrollable.fragment.Tab14Fragment;
 import com.sunfusheng.scrollable.widget.BottomTabBar;
 
 public class MainActivity extends BaseActivity {

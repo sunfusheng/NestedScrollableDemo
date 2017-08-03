@@ -10,14 +10,6 @@ import java.util.List;
  */
 public class ModelUtil {
 
-    public static List<Item> getTab21Data() {
-        List<Item> list = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            list.add(new Item("", R.color.md_blue_400));
-        }
-        return list;
-    }
-
     public static List<MultiItem> getTab22Data() {
         List<MultiItem> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -33,11 +25,20 @@ public class ModelUtil {
         return list;
     }
 
-    public static List<MultiItem> getTab23Data() {
+    public static List<Item> getTab23Data() {
+        List<Item> list = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            list.add(new Item("", R.color.md_blue_400));
+        }
+        return list;
+    }
+
+    public static List<MultiItem> getTab31Data() {
         List<MultiItem> list = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
             list.add(new MultiItem(-1));
         }
         return list;
     }
+
 }

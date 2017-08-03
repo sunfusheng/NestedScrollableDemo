@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable;
+package com.sunfusheng.scrollable.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sunfusheng.scrollable.R;
 import com.sunfusheng.scrollable.adpater.FragmentPagerItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout;

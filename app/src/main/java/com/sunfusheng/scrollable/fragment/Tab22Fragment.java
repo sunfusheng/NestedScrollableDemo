@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable;
+package com.sunfusheng.scrollable.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.sunfusheng.scrollable.R;
 import com.sunfusheng.scrollable.adpater.MultiItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.model.ModelUtil;
