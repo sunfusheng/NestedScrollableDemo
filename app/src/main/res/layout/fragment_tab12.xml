@@ -5,10 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tab12Fragment"
-        android:textColor="@color/c3"/>
+    <com.sunfusheng.scrollable.widget.NestedScrollingViews.ParentView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@color/md_blue_300">
+
+        <com.sunfusheng.scrollable.widget.NestedScrollingViews.MiddleView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/md_orange_300">
+
+            <com.sunfusheng.scrollable.widget.NestedScrollingViews.ChildView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/md_red_300"/>
+        </com.sunfusheng.scrollable.widget.NestedScrollingViews.MiddleView>
+    </com.sunfusheng.scrollable.widget.NestedScrollingViews.ParentView>
+
 </RelativeLayout>
 
