@@ -5,6 +5,7 @@ import android.support.v4.view.NestedScrollingChild;
 import android.support.v4.view.NestedScrollingChildHelper;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
@@ -49,9 +50,9 @@ public class ChildView extends FrameLayout implements NestedScrollingChild {
                 int offsetX = (int) (event.getX() - mDownX);
                 int offsetY = (int) (event.getY() - mDownY);
 
-                //分发触屏事件给父类处理
+                // 分发触屏事件给父类处理
                 if (dispatchNestedPreScroll(offsetX, offsetY, consumed, offsetInWindow)) {
-                    //减掉父类消耗的距离
+                    // 减掉父类消耗的距离
                     offsetX -= consumed[0];
                     offsetY -= consumed[1];
                 }
@@ -77,36 +78,43 @@ public class ChildView extends FrameLayout implements NestedScrollingChild {
 
     @Override
     public boolean startNestedScroll(int axes) {
+        Log.d("--->", "ChildView startNestedScroll()");
         return mChildHelper.startNestedScroll(axes);
     }
 
     @Override
     public void stopNestedScroll() {
+        Log.d("--->", "ChildView stopNestedScroll()");
         mChildHelper.stopNestedScroll();
     }
 
     @Override
     public boolean hasNestedScrollingParent() {
+        Log.d("--->", "ChildView hasNestedScrollingParent()");
         return mChildHelper.hasNestedScrollingParent();
     }
 
     @Override
     public boolean dispatchNestedScroll(int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int[] offsetInWindow) {
+        Log.d("--->", "ChildView dispatchNestedScroll()");
         return mChildHelper.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow);
     }
 
     @Override
     public boolean dispatchNestedPreScroll(int dx, int dy, int[] consumed, int[] offsetInWindow) {
+        Log.d("--->", "ChildView dispatchNestedPreScroll()");
         return mChildHelper.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow);
     }
 
     @Override
     public boolean dispatchNestedFling(float velocityX, float velocityY, boolean consumed) {
+        Log.d("--->", "ChildView dispatchNestedFling()");
         return mChildHelper.dispatchNestedFling(velocityX, velocityY, consumed);
     }
 
     @Override
     public boolean dispatchNestedPreFling(float velocityX, float velocityY) {
+        Log.d("--->", "ChildView dispatchNestedPreFling()");
         return mChildHelper.dispatchNestedPreFling(velocityX, velocityY);
     }
 }

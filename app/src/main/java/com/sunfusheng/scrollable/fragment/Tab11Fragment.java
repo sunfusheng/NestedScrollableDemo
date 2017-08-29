@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sunfusheng.scrollable.R;
-import com.sunfusheng.scrollable.adpater.FragmentPagerItemAdapter;
+import com.sunfusheng.scrollable.adapter.FragmentPagerItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.widget.SmartTabLayout.SmartTabLayout;
 
@@ -33,9 +33,9 @@ public class Tab11Fragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter.Builder(getContext(), getChildFragmentManager())
-                .add("TAB21", new Tab21Fragment())
                 .add("TAB22", new Tab22Fragment())
                 .add("TAB23", new Tab23Fragment())
+                .add("TAB21", new Tab21Fragment())
                 .build();
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(3);

@@ -7,6 +7,7 @@ import android.support.v4.view.NestedScrollingParent;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -43,22 +44,26 @@ public class MiddleView extends FrameLayout implements NestedScrollingParent, Ne
 
     @Override
     public boolean onStartNestedScroll(View child, View target, int nestedScrollAxes) {
+        Log.w("--->", "MiddleView-ParentHelper onStartNestedScroll()");
         return startNestedScroll(ViewCompat.SCROLL_AXIS_HORIZONTAL | ViewCompat.SCROLL_AXIS_VERTICAL);
     }
 
     @Override
     public void onNestedScrollAccepted(View child, View target, int axes) {
+        Log.w("--->", "MiddleView-ParentHelper onNestedScrollAccepted()");
         mParentHelper.onNestedScrollAccepted(child, target, axes);
     }
 
     @Override
     public void onStopNestedScroll(View child) {
+        Log.w("--->", "MiddleView-ParentHelper onStopNestedScroll()");
         stopNestedScroll();
         mParentHelper.onStopNestedScroll(child);
     }
 
     @Override
     public void onNestedPreScroll(View target, int dx, int dy, int[] consumed) {
+        Log.w("--->", "MiddleView-ParentHelper onNestedPreScroll()");
         if (dispatchNestedPreScroll(dx, dy, consumed, null)) {
             dx -= consumed[0];
             dy -= consumed[1];
@@ -95,6 +100,7 @@ public class MiddleView extends FrameLayout implements NestedScrollingParent, Ne
 
     @Override
     public int getNestedScrollAxes() {
+        Log.w("--->", "MiddleView-ParentHelper getNestedScrollAxes()");
         return mParentHelper.getNestedScrollAxes();
     }
 
@@ -114,11 +120,13 @@ public class MiddleView extends FrameLayout implements NestedScrollingParent, Ne
 
     @Override
     public boolean startNestedScroll(int axes) {
+        Log.w("--->", "MiddleView-ChildHelper startNestedScroll()");
         return mChildHelper.startNestedScroll(axes);
     }
 
     @Override
     public void stopNestedScroll() {
+        Log.w("--->", "MiddleView-ChildHelper stopNestedScroll()");
         mChildHelper.stopNestedScroll();
     }
 
@@ -129,21 +137,25 @@ public class MiddleView extends FrameLayout implements NestedScrollingParent, Ne
 
     @Override
     public boolean dispatchNestedScroll(int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int[] offsetInWindow) {
+        Log.w("--->", "MiddleView-ChildHelper dispatchNestedScroll()");
         return mChildHelper.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow);
     }
 
     @Override
     public boolean dispatchNestedPreScroll(int dx, int dy, int[] consumed, int[] offsetInWindow) {
+        Log.w("--->", "MiddleView-ChildHelper dispatchNestedPreScroll()");
         return mChildHelper.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow);
     }
 
     @Override
     public boolean dispatchNestedFling(float velocityX, float velocityY, boolean consumed) {
+        Log.w("--->", "MiddleView-ChildHelper dispatchNestedFling()");
         return mChildHelper.dispatchNestedFling(velocityX, velocityY, consumed);
     }
 
     @Override
     public boolean dispatchNestedPreFling(float velocityX, float velocityY) {
+        Log.w("--->", "MiddleView-ChildHelper  dispatchNestedPreFling()");
         return mChildHelper.dispatchNestedPreFling(velocityX, velocityY);
     }
 

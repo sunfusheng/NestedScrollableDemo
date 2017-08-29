@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sunfusheng.scrollable.R;
-import com.sunfusheng.scrollable.adpater.ListViewAdapter;
+import com.sunfusheng.scrollable.adapter.ListViewAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.model.ModelUtil;
 import com.sunfusheng.scrollable.widget.NestedListView;

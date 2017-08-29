@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sunfusheng.scrollable.R;
-import com.sunfusheng.scrollable.adpater.MultiItemAdapter;
+import com.sunfusheng.scrollable.adapter.MultiItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.model.ModelUtil;
 import com.sunfusheng.scrollable.widget.ScrollableLayout.ScrollableHelper;

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.view.NestedScrollingParent;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -33,22 +34,25 @@ public class ParentView extends FrameLayout implements NestedScrollingParent {
 
     @Override
     public boolean onStartNestedScroll(View child, View target, int nestedScrollAxes) {
+        Log.e("--->", "ParentView onStartNestedScroll()");
         return true;
     }
 
     @Override
     public void onNestedScrollAccepted(View child, View target, int axes) {
+        Log.e("--->", "ParentView onNestedScrollAccepted()");
         mParentHelper.onNestedScrollAccepted(child, target, axes);
     }
 
     @Override
     public void onStopNestedScroll(View child) {
+        Log.e("--->", "ParentView onStopNestedScroll()");
         mParentHelper.onStopNestedScroll(child);
     }
 
-    // 子类滑动事件分发回调dispatchNestedPreScroll
     @Override
     public void onNestedPreScroll(View target, int dx, int dy, int[] consumed) {
+        Log.e("--->", "ParentView onNestedPreScroll()");
         if (dx > 0) {
             if (target.getRight() + dx > getWidth()) {
                 dx = target.getRight() + dx - getWidth();
@@ -80,6 +84,7 @@ public class ParentView extends FrameLayout implements NestedScrollingParent {
 
     @Override
     public int getNestedScrollAxes() {
+        Log.e("--->", "ParentView getNestedScrollAxes()");
         return mParentHelper.getNestedScrollAxes();
     }
 }

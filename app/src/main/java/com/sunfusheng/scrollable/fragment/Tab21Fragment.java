@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sunfusheng.scrollable.R;
-import com.sunfusheng.scrollable.adpater.FragmentPagerItemAdapter;
+import com.sunfusheng.scrollable.adapter.FragmentPagerItemAdapter;
 import com.sunfusheng.scrollable.base.BaseFragment;
 import com.sunfusheng.scrollable.widget.ScrollableLayout.ScrollableHelper;
 import com.sunfusheng.scrollable.widget.ScrollableLayout.ScrollableLayout;

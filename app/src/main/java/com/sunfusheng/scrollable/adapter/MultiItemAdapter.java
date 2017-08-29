@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable.adpater;
+package com.sunfusheng.scrollable.adapter;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;

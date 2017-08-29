@@ -1,4 +1,4 @@
-package com.sunfusheng.scrollable.adpater;
+package com.sunfusheng.scrollable.adapter;
 
 import android.content.Context;
 import android.view.View;
