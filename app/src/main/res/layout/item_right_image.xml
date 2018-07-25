@@ -42,7 +42,7 @@
             android:layout_alignParentRight="true"
             android:background="@color/md_blue_400">
 
-            <com.sunfusheng.glideimageview.GlideImageView
+            <com.sunfusheng.GlideImageView
                 android:id="@+id/giv"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
