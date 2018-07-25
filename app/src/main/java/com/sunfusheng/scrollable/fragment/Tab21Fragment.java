@@ -29,9 +29,9 @@ public class Tab21Fragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab21, container, false);
-        scrollableLayout = (ScrollableLayout) view.findViewById(R.id.scrollableLayout);
-        tabLayout = (SmartTabLayout) view.findViewById(R.id.tabLayout);
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        scrollableLayout = view.findViewById(R.id.scrollableLayout);
+        tabLayout = view.findViewById(R.id.tabLayout);
+        viewPager = view.findViewById(R.id.viewPager);
         return view;
     }
 
